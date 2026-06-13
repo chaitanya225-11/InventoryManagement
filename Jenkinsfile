@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                echo 'Downloading Code'
+                echo 'Downloading Code from GitHub'
             }
         }
 
@@ -18,7 +18,7 @@ pipeline {
             }
         }
 
-        stage('Build React App') {
+        stage('Build Application') {
             steps {
                 bat '''
                 cd frontend\\my_project
@@ -27,27 +27,23 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
+        stage('Run Application') {
             steps {
-                bat 'docker build -t inventorymanagement .'
-            }
-        }
-
-        stage('Run Container') {
-            steps {
-                bat 'docker rm -f inventorymanagement-container'
-                bat 'docker run -d --name inventorymanagement-container -p 80:80 inventorymanagement'
+                bat '''
+                cd frontend\\my_project
+                start cmd /c npm run dev -- --host 0.0.0.0 --port 8000
+                '''
             }
         }
     }
 
     post {
         success {
-            echo 'Deployment Successful!'
+            echo 'Application Running on Port 8000'
         }
 
         failure {
-            echo 'Deployment Failed!'
+            echo 'Build Failed!'
         }
     }
 }
