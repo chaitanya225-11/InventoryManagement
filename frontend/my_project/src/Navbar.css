@@ -1,0 +1,37 @@
+/* frontend/src/NavBar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #007bff;
+  padding: 12px 20px;
+}
+
+.logo {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  color: black;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black !important;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffdd57;
+}
+
+.li{
+  color: black;
+}
+

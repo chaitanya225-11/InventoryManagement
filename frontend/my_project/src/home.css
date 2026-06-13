@@ -1,0 +1,53 @@
+.dashboard {
+  padding: 30px;
+  text-align: center;
+}
+
+.dashboard h1 {
+  margin-bottom: 30px;
+  color: #007bff;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card1 {
+  background: #11c114;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card2 {
+  background: #0c8055;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card3 {
+  background: #22a7bf;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card4 {
+  background: #6b2765;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 32px;
+  color: #333;
+}
+
+.card p {
+  font-size: 16px;
+  color: #666;
+}

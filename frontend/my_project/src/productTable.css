@@ -1,0 +1,88 @@
+/* ProductTable.css */
+.product-table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Header cells */
+.product-table th {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Table cells */
+.product-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  word-wrap: break-word; 
+}
+
+/* Row striping */
+.product-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.product-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Action buttons container */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Action buttons */
+.action-buttons button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Edit button */
+.action-buttons .edit-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.action-buttons .edit-btn:hover {
+  background-color: #218838;
+}
+
+/* Delete button */
+.action-buttons .delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.action-buttons .delete-btn:hover {
+  background-color: #c82333;
+}
+
+
+.product-table td:nth-child(4) {
+  font-style: italic;
+  color: #555;
+}
+
+h2{
+  color: black;
+}
