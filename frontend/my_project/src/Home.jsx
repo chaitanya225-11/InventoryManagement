@@ -12,7 +12,7 @@ function Home() {
   });
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    fetch("https://inventory-backend-2wgl.onrender.com/api/products")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
