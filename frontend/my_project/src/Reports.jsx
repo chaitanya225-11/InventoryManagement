@@ -24,7 +24,7 @@ function Reports() {
   // Product-wise stock
   const fetchStockReport = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/products/reports/stock");
+      const res = await fetch("https://inventory-backend-2wgl.onrender.com/api/products/reports/stock");
       const data = await res.json();
       setStockData(data);
     } catch (err) {
@@ -35,7 +35,7 @@ function Reports() {
   // Monthly stock trend
   const fetchMonthlyReport = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/products/reports/monthly");
+      const res = await fetch("https://inventory-backend-2wgl.onrender.com/api/products/reports/monthly");
       const data = await res.json();
 
       // Convert month number → name

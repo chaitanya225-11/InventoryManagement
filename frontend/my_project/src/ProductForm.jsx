@@ -42,9 +42,9 @@ function ProductForm({ onAdd, editingProduct, setEditingProduct }) {
 
     try {
       // Determine URL and method
-      const url = editingProduct
-        ? `http://localhost:5000/api/products/${editingProduct._id}`
-        : "http://localhost:5000/api/products";
+     const url = editingProduct
+  ? `https://inventory-backend-2wgl.onrender.com/api/products/${editingProduct._id}`
+  : "https://inventory-backend-2wgl.onrender.com/api/products";
 
       const method = editingProduct ? "PUT" : "POST";
 

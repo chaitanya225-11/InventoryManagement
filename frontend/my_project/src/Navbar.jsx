@@ -8,7 +8,7 @@ function Navbar() {
       <h2 className="logo">My Project</h2>
       <ul className="nav-links">
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">Home.</Link>
         </li>
         <li>
           <Link to="/add">Add Product</Link>

@@ -8,7 +8,7 @@ function ProductTable({ editingProduct, setEditingProduct }) {
 
   const fetchProducts = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/products");
+      const res = await fetch("https://inventory-backend-2wgl.onrender.com/api/products");
       const data = await res.json();
       setProducts(data);
     } catch (err) {
@@ -27,9 +27,9 @@ function ProductTable({ editingProduct, setEditingProduct }) {
     if (!confirmDelete) return;
 
     try {
-      await fetch(`http://localhost:5000/api/products/${id}`, {
-        method: "DELETE",
-      });
+      await fetch(`https://inventory-backend-2wgl.onrender.com/api/products/${id}`, {
+  method: "DELETE",
+});
       fetchProducts();
       window.alert(`Product "${name}" deleted successfully!`);
     } catch (err) {
