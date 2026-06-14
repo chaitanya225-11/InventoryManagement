@@ -22,5 +22,9 @@ connectDB().then((db) => {
   app.use("/api/products", require("./src/routes/productRoutes")(db));
 });
 
+app.get("/", (req, res) => {
+  res.send("Inventory Management Backend is Running");
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
