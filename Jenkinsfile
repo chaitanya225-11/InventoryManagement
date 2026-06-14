@@ -40,15 +40,31 @@ pipeline {
                 }
             }
         }
+
+        stage('Deploy Backend to Render') {
+            steps {
+                withCredentials([string(credentialsId: 'RENDER_DEPLOY_HOOK', variable: 'RENDER_HOOK')]) {
+                    bat 'curl -X POST "%RENDER_HOOK%"'
+                }
+            }
+        }
+
+        stage('Deploy Frontend to Vercel') {
+            steps {
+                withCredentials([string(credentialsId: 'VERCEL_DEPLOY_HOOK', variable: 'VERCEL_HOOK')]) {
+                    bat 'curl -X POST "%VERCEL_HOOK%"'
+                }
+            }
+        }
     }
 
     post {
         success {
-            echo 'Build Successful!'
+            echo 'Build and Deployment Successful!'
         }
 
         failure {
-            echo 'Build Failed!'
+            echo 'Build or Deployment Failed!'
         }
     }
 }
