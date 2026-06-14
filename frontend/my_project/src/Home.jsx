@@ -40,6 +40,7 @@ function Home() {
   return (
     <div className="dashboard">
       <h1>Inventory Dashboard</h1>
+      <h1>hello</h1>
 
       <div className="cards">
         <div className="card1">
