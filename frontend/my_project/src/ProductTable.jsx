@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./ProductTable.css";
+import "./productTable.css";
 
 function ProductTable({ editingProduct, setEditingProduct }) {
   const [products, setProducts] = useState([]);
