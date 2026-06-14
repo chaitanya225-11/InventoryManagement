@@ -8,11 +8,7 @@ dotenv.config();
 const app = express();
 
 // Enable CORS for your frontend
-app.use(cors({
-  origin: "http://localhost:5173",  // allow only your React app
-  methods: ["GET", "POST", "DELETE"],
-  allowedHeaders: ["Content-Type"],
-}));
+app.use(cors());
 
 app.use(express.json());
 
