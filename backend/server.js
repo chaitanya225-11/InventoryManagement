@@ -8,7 +8,14 @@ dotenv.config();
 const app = express();
 
 // Enable CORS for your frontend
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://inventory-management-seven-teal.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type"]
+}));
 
 app.use(express.json());
 
