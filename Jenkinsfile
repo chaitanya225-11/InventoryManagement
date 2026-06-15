@@ -50,13 +50,12 @@ pipeline {
         }
 
         stage('Deploy Frontend to Firebase') {
-            steps {
-                dir('frontend/my_project') {
-                    bat 'npm install -g firebase-tools'
-                    bat 'firebase deploy --only hosting'
-                }
-            }
+    steps {
+        dir('frontend/my_project') {
+            bat 'firebase deploy --only hosting'
         }
+    }
+}
     }
 
     post {
