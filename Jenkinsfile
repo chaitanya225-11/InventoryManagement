@@ -49,10 +49,12 @@ pipeline {
             }
         }
 
-       stage('Deploy Frontend to Firebase') {
+      stage('Deploy Frontend to Firebase') {
     steps {
         dir('frontend/my_project') {
-            bat '"C:\\Users\\Chaitanya Sai\\AppData\\Roaming\\npm\\firebase.cmd" deploy --only hosting'
+            withCredentials([string(credentialsId: 'FIREBASE_TOKEN', variable: 'FB_TOKEN')]) {
+                bat '"C:\\Users\\Chaitanya Sai\\AppData\\Roaming\\npm\\firebase.cmd" deploy --only hosting --token %FB_TOKEN%'
+            }
         }
     }
 }
