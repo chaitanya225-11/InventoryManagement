@@ -49,14 +49,14 @@ pipeline {
             }
         }
 
-        stage('Deploy Frontend to Vercel') {
-            steps {
-                withCredentials([string(credentialsId: 'VERCEL_DEPLOY_HOOK', variable: 'VERCEL_HOOK')]) {
-                    bat 'curl -X POST "%VERCEL_HOOK%"'
-                }
-            }
+        stage('Deploy Frontend to Firebase') {
+    steps {
+        dir('frontend/my_project') {
+            bat 'npm install -g firebase-tools'
+            bat 'firebase deploy --only hosting'
         }
     }
+}
 
     post {
         success {
