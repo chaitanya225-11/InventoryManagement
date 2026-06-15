@@ -49,10 +49,10 @@ pipeline {
             }
         }
 
-        stage('Deploy Frontend to Firebase') {
+       stage('Deploy Frontend to Firebase') {
     steps {
         dir('frontend/my_project') {
-            bat 'firebase deploy --only hosting'
+            bat '"C:\\Users\\Chaitanya Sai\\AppData\\Roaming\\npm\\firebase.cmd" deploy --only hosting'
         }
     }
 }
