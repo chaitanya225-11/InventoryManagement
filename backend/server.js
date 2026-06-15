@@ -11,7 +11,8 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://inventory-management-seven-teal.vercel.app"
+    "https://inventory-management-seven-teal.vercel.app",
+    "https://inventorymanagementsyste-942b7.web.app"
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type"]
