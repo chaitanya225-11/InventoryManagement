@@ -8,6 +8,7 @@ function Navbar() {
   const handleLogout = async () => {
     try {
       await signOut(auth);
+      alert("Logged out successfully");
     } catch (error) {
       console.error("Logout Error:", error);
     }
@@ -19,7 +20,7 @@ function Navbar() {
 
       <ul className="nav-links">
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">Home.</Link>
         </li>
 
         <li>
